@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <title>Socket.IO chat</title>
+  <meta charset="utf-8">
+  <style>
+    #messages { list-style-type: none; margin: 0; padding: 0; max-height: calc(100vh - 50px) !important; overflow: auto; }
+    #messages li { padding: 5px 10px; }
+    #messages li:nth-child(odd) { background: #eee; }
+    #rooms {display: none;}
+    #chat {display: none;}
+  </style>
+  <div id="username">
+    <form action="#" id="nameForm">
+        <input id="n" autocomplete="off" placeholder="name">
+        <input type="submit">
+    </form>
+  </div>
+  <div id="rooms">
+    <form action="#" id="roomForm">
+        <input id="r" autocomplete="off" placeholder="room">
+        <input type="submit">
+    </form>
+  </div>
+  <div id="chat">
+    <ul id="messages"></ul>
+    <form action="#" id="messageForm">
+        <input id="m" autocomplete="off" placeholder="hello">
+        <input type="submit">
+        <button id="leave">Leave this room</button>
+    </form>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="chat.js"></script>
